@@ -10,6 +10,7 @@ import NotAuthenticated from './components/NotAuthenticated';
 import { PrivateRoute } from './components/PrivateRoute';
 
 export default function App() {
+  const apiUrl = import.meta.env.VITE_API_URL;
   return (
     <>
       <BooksProvider>
@@ -25,6 +26,9 @@ export default function App() {
           </Routes>
         </Router>
       </BooksProvider>
+      <div>
+        <p>API URL: {apiUrl}</p>
+      </div>
     </>
   )
 }
